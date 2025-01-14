@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+   margin: 0;
+   padding: 0;
+    font-family: "Rye", serif;
+    font-weight: 400;
+    font-style: normal;
+  
+}
+
+.hero {
+    background-image: url('../images/WBSTL141123_GreatHall_HR_1437-1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
