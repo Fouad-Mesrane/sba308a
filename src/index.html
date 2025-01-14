@@ -3,47 +3,81 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <!-- Tailwind css links -->
+    <!-- Tailwind css links -->
     <link rel="stylesheet" href="./input.css" />
     <link rel="stylesheet" href="./output.css" />
+    <!-- flowbite library for tailwind -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
     <!-- JS and axios library scripts -->
     <script src="../src/main.js" type="module" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <!-- fonts from google -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rye&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Harry Potter</title>
   </head>
   <body class="">
-   
-      <!-- navbar section -->
-      <section class="nav">
-       <nav class="bg-slate-800 text-orange-300 p-4">
-         <div class="flex flex-col md:flex-row justify-between items-center">
-          <h1 class="md:text-lg">Harry Potter Guide</h1>
-          <ul class="flex justify-center gap-4 p-1 text-xs md:text-sm ">
-            <li><a href="#">Books</a></li>
-            <li><a href="#">Characters</a></li>
-            <li><a href="#">Houses</a></li>
-            <li><a href="#">Spells</a></li>
-          </ul>
-        </div>
-       </nav>
-      </section>
+    <!-- navbar section -->
+    <section class="nav">
+     
+    </section>
 
-      <!-- hero section -->
-      <section class="hero h-screen">
-            
-      </section>
+    <!-- hero section -->
+    <section
+      class="hero h-screen flex flex-col items-center justify-center sm:text-lg md:text-3xl"
+    >
+      <h1 class="text-orange-300 bg-slate-800 bg-opacity-85 p-4 rounded-lg m-6 md:text-3xl lg:text-5xl animate-pulse">
+        Welcome to the Wizarding World
+      </h1>
+      <form action="#" class="text-center m-6">
+        <select
+          id="selectOption"
+          class="block w-full px-2 py-1.5 lg:px-4 lg:py-3 text-base bg-slate-800 text-orange-300 border border-orange-300 rounded-lg focus:ring-orange-300 focus:border-orange-600"
+        >
+          <option selected>What Are You Interested In?</option>
+          <option value="books">Books</option>
+          <option value="characters">Characters</option>
+          <option value="houses">Houses</option>
+          <option value="spells">Spells</option>
+        </select>
+        <button
+          type="submit"
+          class="text-slate-900 bg-orange-300 hover:bg-orange-600 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 m-6 text-center inline-flex items-center"
+        >
+          Search
+          <svg
+            class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"
+            />
+          </svg>
+        </button>
+      </form>
+    </section>
 
-      <!-- footer section -->
-      <section class="footer">
-        <footer></footer>
-      </section>
+    <!-- footer section -->
+    <section class="footer">
+      <footer></footer>
+    </section>
 
-
- 
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
   </body>
 </html>
