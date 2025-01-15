@@ -45,6 +45,8 @@ searchBtn.addEventListener("click", async (e) => {
         const detailsContainer = document.createElement("div");
         const title = document.createElement("h2");
         const description = document.createElement("p");
+        const releaseDate = document.createElement('span')
+        const pages = document.createElement('span')
 
         // see details of the book
         btn.addEventListener("click", (e) => {
@@ -64,15 +66,17 @@ searchBtn.addEventListener("click", async (e) => {
               "leading-6"
             );
             description.textContent = book.description;
-            detailsContainer.appendChild(title);
-            detailsContainer.appendChild(description);
+            releaseDate.textContent = `Released on ${book.releaseDate} and has a total pages of ${book.pages}`
+            releaseDate.classList.add("text-xs", "text-orange-300")
+            detailsContainer.append(title, description, releaseDate, pages);
+          
             div.insertBefore(detailsContainer, div.firstChild);
           } else {
             img.src = book.cover;
 
             detailsContainer.textContent = "";
             detailsContainer.classList.add("hidden");
-            
+
             title.textContent = "";
             description.textContent = "";
             btn.textContent = "details";
@@ -82,7 +86,6 @@ searchBtn.addEventListener("click", async (e) => {
 
       heroWrapper.classList.add("hidden");
     } else if (selectValue === "characters") {
-    } else if (selectValue === "houses") {
     } else if (selectValue === "spells") {
     }
   } catch (error) {
