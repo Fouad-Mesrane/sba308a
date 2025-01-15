@@ -42,26 +42,40 @@ searchBtn.addEventListener("click", async (e) => {
         booksEl.appendChild(div);
 
         // showing more details when clicking on details button
+        const detailsContainer = document.createElement("div");
         const title = document.createElement("h2");
-        const description = document.createElement('p')
-        title.classList.add("text-orange-300", "font-bold")
-        description.classList.add('text-xs', 'text-white','font-normal')
+        const description = document.createElement("p");
 
+        // see details of the book
         btn.addEventListener("click", (e) => {
-
           if (e.target.textContent === "details") {
             img.src = "";
+            if(detailsContainer.classList.contains("hidden")) {
+                detailsContainer.classList.remove("hidden")
+            }
+            detailsContainer.classList.add("bg-slate-800", "p-6", "rounded-lg");
             btn.textContent = "back";
             title.textContent = book.title;
-            description.textContent = book.description
-            div.insertBefore(title, div.firstChild);
-            div.insertBefore(description, div.lastChild);
+            title.classList.add("text-orange-300", "font-bold", "mb-4");
+            description.classList.add(
+              "text-xs",
+              "text-white",
+              "font-extralight",
+              "leading-6"
+            );
+            description.textContent = book.description;
+            detailsContainer.appendChild(title);
+            detailsContainer.appendChild(description);
+            div.insertBefore(detailsContainer, div.firstChild);
           } else {
             img.src = book.cover;
-            title.textContent = ""
-            btn.textContent = "details";
 
-          
+            detailsContainer.textContent = "";
+            detailsContainer.classList.add("hidden");
+            
+            title.textContent = "";
+            description.textContent = "";
+            btn.textContent = "details";
           }
         });
       });
