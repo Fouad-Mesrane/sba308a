@@ -8,11 +8,15 @@
   font-family: "Rye", serif;
   font-weight: 400;
   font-style: normal;
+  box-sizing: border-box;
+
 }
 
-.hero {
+body {
   background-image: url("../images/56542b81f3ab15693ad95a3031065c5a.jpg");
-  background-size: cover;
+
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
+
 }

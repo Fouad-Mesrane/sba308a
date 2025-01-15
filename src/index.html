@@ -28,49 +28,106 @@
   <body class="">
     <!-- navbar section -->
     <section class="nav">
-     
+      <nav class="bg-slate-800 text-orange-300 p-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <a class="hover:text-orange-600" href="#">
+            <div class="flex gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                />
+              </svg>
+
+              <h1 class="md:text-lg">Harry Potter Guide</h1>
+            </div>
+          </a>
+          <ul class="flex justify-center gap-4 p-1 text-xs md:text-sm">
+            <li>
+              <a class="hover:text-orange-600" id="books-link" href="#"
+                >Books</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-orange-600" id="characters-link" href="#"
+                >Characters</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-orange-600" id="houses-link" href="#"
+                >Houses</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-orange-600" id="spells-link" href="#"
+                >Spells</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
     </section>
 
     <!-- hero section -->
     <section
       class="hero h-screen flex flex-col items-center justify-center sm:text-lg md:text-3xl"
     >
-      <h1 class="text-orange-300 bg-slate-800 bg-opacity-85 p-4 rounded-lg m-6 md:text-3xl lg:text-5xl animate-pulse">
-        Welcome to the Wizarding World
-      </h1>
-      <form action="#" class="text-center m-6">
-        <select
-          id="selectOption"
-          class="block w-full px-2 py-1.5 lg:px-4 lg:py-3 text-base bg-slate-800 text-orange-300 border border-orange-300 rounded-lg focus:ring-orange-300 focus:border-orange-600"
+      <div id="hero-wrapper" class="text-center">
+        <h1
+          class="text-orange-300 bg-slate-800 bg-opacity-85 p-4 rounded-lg m-6 md:text-3xl lg:text-5xl animate-pulse"
         >
-          <option selected>What Are You Interested In?</option>
-          <option value="books">Books</option>
-          <option value="characters">Characters</option>
-          <option value="houses">Houses</option>
-          <option value="spells">Spells</option>
-        </select>
-        <button
-          type="submit"
-          class="text-slate-900 bg-orange-300 hover:bg-orange-600 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 m-6 text-center inline-flex items-center"
-        >
-          Search
-          <svg
-            class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 14 10"
+          Welcome to the Wizarding World
+        </h1>
+        <div class="m-6">
+          <select
+            id="select-option"
+            class="px-2 py-1.5 lg:px-4 lg:py-3 text-base bg-slate-800 text-orange-300 border border-orange-300 rounded-lg focus:ring-orange-300 focus:border-orange-600"
           >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M1 5h12m0 0L9 1m4 4L9 9"
-            />
-          </svg>
-        </button>
-      </form>
+            <option selected>What Are You Interested In?</option>
+            <option value="books">Books</option>
+            <option value="characters">Characters</option>
+            <option value="houses">Houses</option>
+            <option value="spells">Spells</option>
+          </select>
+          <button
+            type="button"
+            id="search-btn"
+            class="text-slate-900 bg-orange-300 hover:bg-orange-600 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 m-6 text-center inline-flex items-center"
+          >
+            Search
+            <svg
+              class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 14 10"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 5h12m0 0L9 1m4 4L9 9"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="books" class="w-full max-h-full grid grid-cols-3 gap-4 p-6 m-6 place-items-center">
+        
+      </div>
+
+      <div id="characters"></div>
+      <div id="houses"></div>
+      <div id="spells"></div>
     </section>
 
     <!-- footer section -->
