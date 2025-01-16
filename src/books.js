@@ -1,5 +1,5 @@
 import { fetchData } from "./api.js";
-import { selectEl, booksEl,heroWrapper } from "./elements.js";
+import { selectEl, booksEl,heroWrapper, charEl, spellsEl } from "./elements.js";
 
 
 export default async function  renderBooks () {
@@ -78,6 +78,8 @@ export default async function  renderBooks () {
           });
     
           heroWrapper.classList.add("hidden");
+          charEl.classList.add('hidden')
+          spellsEl.classList.add('hidden')
         } 
       } catch (error) {
         console.error(`Error fetching data`, error);

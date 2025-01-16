@@ -1,5 +1,5 @@
 import { fetchData } from "./api.js";
-import { selectEl, charEl, heroWrapper } from "./elements.js";
+import { selectEl, charEl, heroWrapper, booksEl, spellsEl } from "./elements.js";
 
 export default async function renderCharcters() {
   try {
@@ -11,6 +11,10 @@ export default async function renderCharcters() {
       characters.map((char) => {
         //creating elements to render the characters
         const div = document.createElement("div");
+
+        if(charEl.classList.contains("hidden")) {
+            charEl.classList.remove("hidden")
+        }
 
         div.innerHTML = `<div class="max-w-sm rounded-lg overflow-hidden shadow-lg bg-slate-800">
       <img class="w-full h-64" src=${char.image} alt=${char.fullName}>
@@ -30,6 +34,8 @@ export default async function renderCharcters() {
       });
 
       heroWrapper.classList.add("hidden");
+      booksEl.classList.add("hidden");
+      spellsEl.classList.add("hidden");
     }
   } catch (error) {
     console.error(`Error fetching data`, error);

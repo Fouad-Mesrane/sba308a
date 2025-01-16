@@ -1,16 +1,26 @@
-import { fetchData } from "./api.js";
+
 import renderBooks from "./books.js";
 import renderCharcters from "./characters.js";
+import renderSpells from "./spells.js";
 import { searchBtn, homeBtn,heroWrapper,selectEl,booksEl,charEl,spellsEl } from "./elements.js";
 
-// rendering the books page
-try {
-  searchBtn.addEventListener("click", renderBooks);
-  searchBtn.addEventListener("click", renderCharcters);
- 
-} catch {
-  console.error("error rendering books page", error);
-}
+// rendering 
+searchBtn.addEventListener("click", () => {
+    try {
+      const selectedOption = selectEl.value; // Assuming there's a dropdown to choose between books and characters
+      if (selectedOption === 'books') {
+        renderBooks();
+      } else if (selectedOption === 'characters') {
+        renderCharcters();
+      } else if (selectedOption === 'spells') {
+        renderSpells()
+      }
+    } catch (error) {
+      console.error("Error handling search action:", error);
+    }
+  });
+  
+
 
 // home page reset
 function homePage() {
