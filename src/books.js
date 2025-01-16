@@ -1,11 +1,13 @@
 import { fetchData } from "./api.js";
-import { selectEl, booksEl,heroWrapper, searchBtn } from "./elements.js";
+import { selectEl, booksEl,heroWrapper } from "./elements.js";
 
 
 export default async function  renderBooks () {
     try {
-        const selectValue = selectEl.value.toString();
-        if (selectValue === "books") {
+        const selectValue = selectEl.value.toLowerCase();
+
+        if (selectValue === "books" ) {
+
           // fetching the books from api
           const books = await fetchData(selectValue);
           books.map((book) => {
@@ -76,9 +78,7 @@ export default async function  renderBooks () {
           });
     
           heroWrapper.classList.add("hidden");
-        } else if (selectValue === "characters") {
-        } else if (selectValue === "spells") {
-        }
+        } 
       } catch (error) {
         console.error(`Error fetching data`, error);
       }

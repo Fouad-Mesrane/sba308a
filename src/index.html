@@ -51,24 +51,7 @@
               <h1 class="md:text-lg">Harry Potter Guide</h1>
             </div>
           </a>
-          <ul class="flex justify-center gap-4 p-1 text-xs md:text-sm">
-            <li>
-              <a class="hover:text-orange-600" id="books-link" href="#"
-                >Books</a
-              >
-            </li>
-            <li>
-              <a class="hover:text-orange-600" id="characters-link" href="#"
-                >Characters</a
-              >
-            </li>
-           
-            <li>
-              <a class="hover:text-orange-600" id="spells-link" href="#"
-                >Spells</a
-              >
-            </li>
-          </ul>
+        
         </div>
       </nav>
     </section>
@@ -91,7 +74,6 @@
             <option selected>What Are You Interested In?</option>
             <option value="books">Books</option>
             <option value="characters">Characters</option>
-            <option value="houses">Houses</option>
             <option value="spells">Spells</option>
           </select>
           <button
@@ -122,7 +104,7 @@
       
       </div>
 
-      <div id="characters"></div>
+      <div id="characters" class="w-full max-h-full grid col md:grid-cols-2 lg:grid-cols-4 gap-4 p-6 m-6 place-items-center"></div>
       <div id="houses"></div>
       <div id="spells"></div>
     </section>
