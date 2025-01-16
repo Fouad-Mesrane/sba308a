@@ -23,17 +23,17 @@ searchBtn.addEventListener("click", () => {
   // rendering via navbar links
 booksLink.addEventListener('click', (e)=> {
     console.log(booksLink.textContent.trim())
-    if (heroWrapper.classList.contains('hidden')) return
+    if (heroWrapper.classList.contains('hidden') && charEl.classList.contains('hidden') && spellsEl.classList.contains('hidden')) return
     renderBooks()
 })
 charLink.addEventListener('click', (e)=> {
     
-    if (heroWrapper.classList.contains('hidden')) return
+    if (heroWrapper.classList.contains('hidden')  && booksEl.classList.contains('hidden') && spellsEl.classList.contains('hidden')) return
     renderCharcters()
 })
 spellsLink.addEventListener('click', (e)=> {
     
-    if (heroWrapper.classList.contains('hidden')) return
+    if (heroWrapper.classList.contains('hidden')  && charEl.classList.contains('hidden') && booksEl.classList.contains('hidden')) return
     renderSpells()
 })
 
