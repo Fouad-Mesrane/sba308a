@@ -1,7 +1,7 @@
 
 import renderBooks from "./books.js";
 import renderCharcters from "./characters.js";
-import renderSpells from "./spells.js";
+import renderSpells, { spellsLink } from "./spells.js";
 import { searchBtn, homeBtn,heroWrapper,selectEl,booksEl,charEl,spellsEl } from "./elements.js";
 
 // rendering 
@@ -20,7 +20,11 @@ searchBtn.addEventListener("click", () => {
     }
   });
   
-
+spellsLink.addEventListener('click', (e)=> {
+    
+    if (heroWrapper.classList.contains('hidden')) return
+    renderSpells()
+})
 
 // home page reset
 function homePage() {

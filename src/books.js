@@ -15,6 +15,10 @@ export default async function  renderBooks () {
             const div = document.createElement("div");
             const img = document.createElement("img");
             const btn = document.createElement("button");
+
+            if(booksEl.classList.contains("hidden")) {
+                booksEl.classList.remove("hidden")
+            }
     
             btn.textContent = "details";
             btn.classList.add(

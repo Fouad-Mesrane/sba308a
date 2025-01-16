@@ -16,9 +16,9 @@ export default async function renderCharcters() {
             charEl.classList.remove("hidden")
         }
 
-        div.innerHTML = `<div class="max-w-sm rounded-lg overflow-hidden shadow-lg bg-slate-800">
-      <img class="w-full h-64" src=${char.image} alt=${char.fullName}>
-      <div class="px-6 py-4">
+        div.innerHTML = `<div class="w-64 h-max rounded-lg overflow-hidden shadow-lg bg-slate-800">
+      <img class="w-full h-56 " src=${char.image} alt=${char.fullName}>
+      <div class="px-6 py-6">
         <div class="font-bold text-orange-300 text-lg mb-2">${char.fullName}</div>
         <p class="text-gray-300 text-sm">
           <strong>Nickname:</strong> ${char.nickname}<br>
