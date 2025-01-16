@@ -1,15 +1,15 @@
 import { fetchData } from "./api.js";
-import { selectEl, booksEl,heroWrapper, charEl, spellsEl } from "./elements.js";
+import { selectEl, booksEl,heroWrapper, charEl, spellsEl, booksLink } from "./elements.js";
 
 
 export default async function  renderBooks () {
     try {
         const selectValue = selectEl.value.toLowerCase();
-
-        if (selectValue === "books" ) {
+        const booksValue = booksLink.textContent.trim().toLowerCase()
+        if (selectValue === "books" || booksValue === "books" ) {
 
           // fetching the books from api
-          const books = await fetchData(selectValue);
+          const books = await fetchData("books");
           books.map((book) => {
             //creating elements to render the books
             const div = document.createElement("div");

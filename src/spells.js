@@ -1,11 +1,11 @@
-import { spellsEl,heroWrapper,selectEl, booksEl, charEl } from "./elements.js";
+import { spellsEl,heroWrapper,selectEl, booksEl, charEl, spellsLink } from "./elements.js";
 import { fetchData } from "./api.js";
 
-export const spellsLink = document.getElementById('spells-link')
+
 export default async function renderSpells() {
     try {
       const selectValue = selectEl.value.toLowerCase() 
-      const spellsValue =  spellsLink.textContent.toLowerCase();
+      const spellsValue =  spellsLink.textContent.trim().toLowerCase();
   
       if (selectValue === "spells" || spellsValue === "spells") {
         // fetching the spells from api

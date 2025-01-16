@@ -1,8 +1,8 @@
 
 import renderBooks from "./books.js";
 import renderCharcters from "./characters.js";
-import renderSpells, { spellsLink } from "./spells.js";
-import { searchBtn, homeBtn,heroWrapper,selectEl,booksEl,charEl,spellsEl } from "./elements.js";
+import renderSpells from "./spells.js";
+import { searchBtn, homeBtn,heroWrapper,selectEl,booksEl,charEl,spellsEl, booksLink, charLink, spellsLink } from "./elements.js";
 
 // rendering 
 searchBtn.addEventListener("click", () => {
@@ -20,6 +20,17 @@ searchBtn.addEventListener("click", () => {
     }
   });
   
+  // rendering via navbar links
+booksLink.addEventListener('click', (e)=> {
+    console.log(booksLink.textContent.trim())
+    if (heroWrapper.classList.contains('hidden')) return
+    renderBooks()
+})
+charLink.addEventListener('click', (e)=> {
+    
+    if (heroWrapper.classList.contains('hidden')) return
+    renderCharcters()
+})
 spellsLink.addEventListener('click', (e)=> {
     
     if (heroWrapper.classList.contains('hidden')) return
