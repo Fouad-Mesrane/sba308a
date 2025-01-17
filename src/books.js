@@ -31,7 +31,7 @@ export default async function  renderBooks () {
             );
             img.src = book.cover;
             div.style.width = "300px";
-            div.classList.add("text-center");
+            div.classList.add("text-center" , "mx-4");
             img.style.width = "100%";
     
             div.appendChild(img);
